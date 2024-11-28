@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'basis33';
+    src: url(/fonts/basis33.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: basis33;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 29.5vw;
+    height: 55px;
+    z-index: 3;
+    width: 100%;
+    top: 2px;
+}
+
+.nav1 {
+    display: flex;
+    gap: 42.3vw;
+    align-items: center;
+    height: 3vw;
+    padding-left: 10px;
+}
+
+#logo {
+    background-color: transparent;
+}
+
+.nav2 {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 2vw;
+}
+
+.nav2 > p {
+    cursor: pointer;
+}
+/* Hero Section */
+.hero-image {
+    position: relative;
+    height: 30vw;
+    margin: 0;
+    padding-top: 40px;
+    background-color: black;
+}
+
+.hero-image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-tshirts > img {
+    margin-top: 70px;
+}
+
+/* Second Section */
+.second-part {
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    background-color: rgb(31, 30, 30);
+    z-index: 1;
+}
+
+/* Main Content */
+.main-page {
+    position: relative;
+    top: 0;
+    height: auto;
+    display: flex;
+    margin-top: 0;
+}
+/* T-shirt Styles */
+.gif-tshirt {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27vw;
+    z-index: 2;
+}
+
+.black {
+    position: absolute;
+    left: 20%;
+    width: 15vw;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Position Classes */
+.one { left: 20%; }
+.two { left: 80%; }
+.three { top: 45%; left: 15%; }
+.four { top: 45%; left: 38%; }
+.five { top: 45%; left: 62%; }
+.six { top: 45%; left: 85%; }
+
+/* Categories */
+.categories {
+    position: relative;
+    padding-left: 4vw;
+    list-style-type: none;
+    width: 350px;
+    border-right: 2px solid rgb(145, 143, 143);
+    margin-top: 60px;
+}
+
+.categories > li {
+    font-size: 2.3vw;
+    font-weight: 0.1px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+}
+
+.categories > li::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    border-bottom: 1px solid white;
+    background: none;
+    transition: width 0.3s ease;
+}
+
+.categories > li:hover::after,
+.categories > li.active::after {
+    width: 100%;
+}
+
+/* Product Grid */
+.objects {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    margin-top: 50px;
+}
+
+.obj1 {
+    height: 25vw;
+    width: 21vw;
+    text-align: center;
+    margin-left: 45px;
+    margin-top: 45px;
+    font-size: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.obj-img {
+    width: 15vw;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+    transform-origin: bottom center;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.7));
+
+}
+
+.obj-img:hover {
+    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.7));
+    transform: scale(1.1);
+}
+
+.black:hover {
+    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.7));
+    transform: translate(-50%, -50%) scale(1.0);
+}
+
+.nomarg {
+    margin-top: 0;
+}
+
+/* Media Queries */
+@media screen and (min-width: 760px) and (max-width: 1260px) {
+    .hero-tshirts, .nav2 { display: none; }
+    .nav1 { gap: 30vw; }
+}
+
+@media screen and (max-width: 760px) {
+    .hero-tshirts, .nav2 { display: none; }
+    .nav1 { gap: 30vw; }
+    .second-part > img { display: none; }
+    .categories > li { font-size: 1rem; }
+}
+
+
+
+/*Shopping Page*/
+.filter-bar {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-right: 2px solid rgb(145, 143, 143);
+}
+.filter {
+        position: relative;
+        padding-left: 1vw;
+        list-style-type:circle;
+        width: 200px;
+        height: 100vh;
+        margin-top: 5px;
+    }
+.filter > li::before {
+    content: "• ";
+    color: rgb(255, 255, 255); /* or whatever color you prefer */
+  }
+    
+.filter > li {
+    font-size: 1vw;
+    font-weight: 0.1px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+    }
+
+#filter-heading {
+    font-size: 1.7vw;
+    letter-spacing: 0px;
+    list-style-type: none;
+}
+
+/*About Us Page*/
+.about-page {
+    position:fixed;
+    top:50px;
+    background-color: rgb(0, 0, 0);
+}
+.text {
+    position: relative;
+    top:170px;
+    font-size: 8vh;
+    width: 600px;
+}
+.about-page {
+    display: flex;
+    gap:120px;
+    height: fit-content;
+    left:120px;
+    align-content: center;
+}
+.about {
+    font-size: 3vh;
+}
