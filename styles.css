@@ -206,11 +206,79 @@ body {
 .nomarg {
     margin-top: 0;
 }
+#cart-icon {
+    display: none;
+}
+#compression-hero {
+    display: none;
+    z-index: 2;
+}
+.text-less{
+    display: none;
+}
+.new-arrivals {
+    display: none;
+}
+.new-arrivals > p:first-child {
+    font-size: 36px;
+}
+.text-less{
+    top:10%;
+    display: none;
+    position:absolute;
+    z-index: 5;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.text-less >p:first-child {
+    font-size: 23px;
+    font-weight: 10;
+    word-spacing: 10px;
+}
+#compression-hero {
+    position: absolute;
+    width: 60vh;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.new-arrivals {
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.obj2 {
+    letter-spacing: 1px;
+    font-size: 3vw;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    display: none;
+}
+.objects-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+}
+.obj-img-small {
+    letter-spacing: 1px;
+    width: 30vw;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.7));
+}
+
+.obj-img:hover {
+    filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.7));
+    transform: scale(1.1);
+}
+
 
 /* Media Queries */
 @media screen and (min-width: 760px) and (max-width: 1260px) {
     .hero-tshirts, .nav2 { display: none; }
     .nav1 { gap: 30vw; }
+
 }
 
 @media screen and (max-width: 760px) {
@@ -220,7 +288,55 @@ body {
     .categories > li { font-size: 1rem; }
 }
 
-
+@media (min-width: 200px) and (max-width: 700px) {
+    body {
+        background-color: rgb(15, 14, 14);
+    }
+    #cart-icon {
+        display: block;
+    }
+    .nav1 {
+        gap: 26vw;
+    }
+    #hero-img {
+        height: 80vh;
+    }
+    .second-part {
+        display: none;
+    }
+    .main-page {
+        display: none;
+    }
+    .hero-image {
+        height: 80vh;
+        position: relative;
+    }
+    .hero-tshirts {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #compression-hero {
+        display: block !important;
+    }
+    .gif-tshirt:not(#compression-hero) {
+        display: none;
+    }
+    
+    .new-arrivals {
+        top:20px;
+        display: block;
+    }
+    .text-less {
+        display: block;
+    }
+    .obj2 {
+        display: block;
+    }
+}
 
 /*Shopping Page*/
 .filter-bar {
@@ -259,6 +375,8 @@ body {
     letter-spacing: 0px;
     list-style-type: none;
 }
+
+
 
 /*About Us Page*/
 .about-page {
