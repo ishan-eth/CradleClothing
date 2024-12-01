@@ -15,35 +15,42 @@ body {
     background-color: rgb(0, 0, 0);
     overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    width: 0;
+}
 
 /* Navbar Styles */
 .navbar {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 29.5vw;
+    justify-content: space-between;
     height: 55px;
     z-index: 3;
-    width: 100%;
+    width: 100vw;
     top: 2px;
+    padding: 0 10px;
 }
 
 .nav1 {
     display: flex;
-    gap: 42.3vw;
+    justify-content: space-between;
     align-items: center;
     height: 3vw;
-    padding-left: 10px;
+    width: 57%;
 }
 
 #logo {
     background-color: transparent;
+    margin: 0 20px;
 }
+
 
 .nav2 {
     font-size: 1.2rem;
     display: flex;
-    gap: 2vw;
+    gap: 2rem;
+    align-items: center;
 }
 
 .nav2 > p {
@@ -106,8 +113,8 @@ body {
     position: absolute;
     left: 20%;
     width: 15vw;
-    transition: all 0.3s ease;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Position Classes */
@@ -181,7 +188,9 @@ body {
     position: relative;
     overflow: visible;
 }
-
+.obj1 > p {
+    font-size: 1.7vw;
+}
 .obj-img {
     width: 15vw;
     margin-bottom: 30px;
@@ -205,9 +214,6 @@ body {
 
 .nomarg {
     margin-top: 0;
-}
-#cart-icon {
-    display: none;
 }
 #compression-hero {
     display: none;
@@ -265,38 +271,39 @@ body {
     letter-spacing: 1px;
     width: 30vw;
     margin-bottom: 20px;
+    cursor: pointer;
+    transform-origin: bottom center;
+    transition: all 0.3s ease;
     filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.7));
+    
 }
-
-.obj-img:hover {
+.obj-img-small:hover {
     filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.7));
     transform: scale(1.1);
 }
 
 
 /* Media Queries */
-@media screen and (min-width: 760px) and (max-width: 1260px) {
-    .hero-tshirts, .nav2 { display: none; }
-    .nav1 { gap: 30vw; }
 
-}
-
-@media screen and (max-width: 760px) {
-    .hero-tshirts, .nav2 { display: none; }
-    .nav1 { gap: 30vw; }
-    .second-part > img { display: none; }
-    .categories > li { font-size: 1rem; }
-}
-
-@media (min-width: 200px) and (max-width: 700px) {
+@media (min-width: 200px) and (max-width: 1000px) {
     body {
         background-color: rgb(15, 14, 14);
     }
-    #cart-icon {
-        display: block;
+    .hero-tshirts, .nav2 > p{ 
+        display: none;
     }
     .nav1 {
-        gap: 26vw;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav1 img:first-child {
+        position: absolute;
+        left: 10px;
+    }
+    #logo {
+        margin-left: 60px;
     }
     #hero-img {
         height: 80vh;
@@ -336,6 +343,7 @@ body {
     .obj2 {
         display: block;
     }
+    
 }
 
 /*Shopping Page*/
@@ -378,7 +386,7 @@ body {
 
 
 
-/*About Us Page*/
+/*Coming Soon Page*/
 .about-page {
     position:fixed;
     top:50px;
