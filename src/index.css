@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Basis33';
+  src: url('/fonts/basis33.ttf') format('truetype');
+}
 html, body, #root {
   height: 100%;
   width: 100%;
