@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'basis33';
+    src: url(../Assets/fonts/basis33.ttf)
+}
+* {
+    font-family: basis33;
+}
+.navbar {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 2;
+    position: absolute;
+}
+.nav1 {
+    flex: 1;
+}
+.nav3 {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart-icon-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}

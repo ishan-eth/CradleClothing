@@ -1,0 +1,29 @@
+.gif-tshirt {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27vw;
+    z-index: 2;
+}
+
+.black {
+    position: absolute;
+    width: 15vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.second-part {
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    background-color: rgb(31, 30, 30);
+    z-index: 1;
+}
+
+.three { top: 45%; left: 15%; }
+.four { top: 45%; left: 38%; }
+.five { top: 45%; left: 62%; }
+.six { top: 45%; left: 85%; }
