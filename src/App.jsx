@@ -11,7 +11,7 @@ import Checkout from './components/Checkout/Checkout';
 import AdminLogin from './components/Admin/AdminLogin';
 import AdminDashboard from './components/Admin/AdminDashboard';
 import BlackCompressionShirt from './components/ProductPages/BlackCompressionShirt';
-import OversizedTShirt from './components/ProductPages/OversizedTShirt';
+import OversizedTShirt from './components/ProductPages/OversizedTshirt.jsx';
 import WhiteCompressionShirt from './components/ProductPages/WhiteCompressionShirt';
 import RegularTShirt from './components/ProductPages/RegularTShirt';
 import BlackTankTop from './components/ProductPages/BlackTankTop';
